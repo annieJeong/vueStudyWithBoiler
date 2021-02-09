@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": false,
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.workingDirectories": [
+    {"mode": "auto"}
+  ],
+  "eslint.validate": [
+      "javascript",
+      "typescript",
+      "vue"
+  ],
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
+}
