@@ -20,6 +20,7 @@
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12",
     "vuex": "^3.6.2",
     "vuex-module-decorators": "^1.0.1"
   },
@@ -34,6 +35,7 @@
     "@vue/cli-plugin-typescript": "^4.5.11",
     "@vue/cli-plugin-vuex": "^4.5.11",
     "@vue/cli-service": "^4.5.11",
+    "@vue/cli-service-global": "^4.5.11",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "chalk": "^4.1.0",
@@ -66,5 +68,17 @@
     ],
     "*.ts": "npm run tsc-staged",
     "*.vue": "npm run vue-staged"
-  }
+  },
+  "description": "*__Note:__ nodejs 14버전에서만 정상 동작하기 때문에 사전에 설치 부탁드립니다.",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annieJeong/vueStudyWithBoiler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annieJeong/vueStudyWithBoiler/issues"
+  },
+  "homepage": "https://github.com/annieJeong/vueStudyWithBoiler#readme"
 }
