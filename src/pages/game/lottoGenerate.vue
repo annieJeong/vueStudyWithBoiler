@@ -28,7 +28,7 @@ function getLottoNumbers() {
     const winBalls = order.slice(0, 6).sort((a, b) => a - b)
     return [...winBalls, bonus]
 }
-const timeouts: Array<any> = []
+let timeouts: Array<number>
 
 @Component({
     components: {

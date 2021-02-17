@@ -2,9 +2,16 @@
     <div>
         <h1>Hi!! Game Page</h1>
         <ul>
-            <li>TicTacToe</li>
-            <li>SpeedCheck</li>
-            <li>MineSweeper</li>
+            <li>
+                <router-link to="./game/tic-tac-toe">TicTacToe</router-link>
+            </li>
+            <li>
+                <router-link to="./game/lotto-generate">lottoGenerate</router-link>
+            </li>
+            <li>
+                <router-link to="./game/mine-sweeper">MineSweeper</router-link>
+            </li>
+            <!-- <li>TicTacToe</li> -->
         </ul>
     </div>
 </template>

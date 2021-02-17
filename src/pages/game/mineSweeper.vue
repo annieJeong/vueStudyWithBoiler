@@ -13,7 +13,7 @@ import MineForm from './component/mineForm.vue'
 import TableComponent from './component/tableComponent.vue'
 import { mineSweeperModule } from '@stores/modules/mineSweeper'
 
-let interval: any
+let interval!: number
 @Component({
     components: {
         MineForm,
@@ -31,7 +31,7 @@ export default class MineSweeper extends Vue {
         return mineSweeperModule.result
     }
     @Watch('halted')
-    watchHalted(v: boolean, oldV: boolean) {
+    watchHalted(v: boolean) {
         if (!v) {
             interval = setInterval(() => {
                 mineSweeperModule.incrementTimer()
@@ -40,8 +40,6 @@ export default class MineSweeper extends Vue {
             clearInterval(interval)
         }
     }
-
-    //
     beforeDestroy() {
         clearInterval(interval)
     }

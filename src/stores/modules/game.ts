@@ -27,7 +27,7 @@ class Game extends VuexModule {
 
     //mutation
     @Mutation
-    CLICK_CELL(data: { rowIndex: any; cellIndex: any }) {
+    CLICK_CELL(data: { rowIndex: number; cellIndex: number }) {
         // this.tableData[data.rowIndex][data.cellIndex] = this.turn
         Vue.set(this.tableData[data.rowIndex], data.cellIndex, this.turn)
     }
@@ -55,7 +55,7 @@ class Game extends VuexModule {
 
     //Action
     @Action
-    clickCell(data: { rowIndex: any; cellIndex: any }) {
+    clickCell(data: { rowIndex: number; cellIndex: number }) {
         this.CLICK_CELL(data)
     }
     @Action
