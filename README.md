@@ -1,55 +1,40 @@
-# LotteCard Loca2.0 Vue Boilerplate 가이드
-## Getting Started
-### Dependencies
-*__Note:__ nodejs 14버전에서만 정상 동작하기 때문에 사전에 설치 부탁드립니다.
+# Vue.ts Boilerplate
 
-- [Node.js](https://nodejs.org/) (V14 LTS)
-- [Yarn](https://classic.yarnpkg.com/en/)
+## TypeScript
 
-### Libraries
+### TypeScript ?
 
-- [Typescript@4.1.x](https://www.typescriptlang.org/)
-- [Vue.js@v2](https://vuejs.org/)
-- [vuex@v3](https://vuex.vuejs.org/)
-- [Vue Class Component](https://class-component.vuejs.org/)
-- [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
-- [Vuex Module Decorators](https://github.com/championswimmer/vuex-module-decorators)
+Microsoft에서 개발.관리 하는 오픈소스 프로그래밍 언어
 
-### Concept
-- Typescript 도입을 통해 코드 안정성 및 생상성 증대
-- 엄격한 타입 Rule 도입으로 안정성 확보
-    - strictNullChecks
-    - noImplicitAny
-- Typescript 주요 Feature 적극 사용 권장
-    - Optional Chaining
-    - Nullish Coalescing
-    - Non Null Assertion Operator
-    - Promise.all
-    - ...
-- 클래스 기반 컴포넌트 (Vue Class Component) 를 활용해 Typescript의 많은 기능을 적극 도입
-- Typescript Decorator Pattern 을 통해 읽기 쉬운 코드를 작성하고 코드의 재사용성을 높임
-- async & await 적극적인 사용으로 읽기 쉬운 코드와 기존의 비동기 처리방식 개선
-- Husky 도입을 통해 즉시 배포가 가능한 코드 유지
+#### **ECMA Script**의 표준 지원
 
-### Installation
+- 모듈화: ES6 모듈, nameSpace 지원
+- OOP: Class, interface 지원
 
-##### Clone this repo:
-```sh
-git clone https://github.com/LOTTECARD/vue.ts-boilerplate.git
-cd vue.ts-boilerplate
+#### JavaScript + 타입
+
+- 명시적 타입 추가로 안정성
+
+#### compile
+
+: TypeScript > compile > JavaScript
+
+```ts
+const test : String = ''
+const test2!: String | null
 ```
 
-##### Install the dependencies:
-```sh
-npm install
-```
+1. 유효성 검사
+2. 타입 어노테이션 제거
 
-##### Development:
-```sh
-npm run serve
-```
+`모듈화와 객체 지향 프로그래밍을 보다 완전하게 지원함으로서
+결합도와 의존도를 낮추어 독립적으로 사용 가능.
+타입으로 컴파일하여 안정성을 갖출 수 있다.
+이런 특징들로 대규모 어플리케이션 개발에 필요한 조건들을 충족.`
 
-### Project Structure
+## Boilerplate | boiler-template
+
+### boiler template structure
 
     .
     ├── .vscode                 # 프로젝트 내에서 사용되는 vscode 설정
@@ -69,3 +54,29 @@ npm run serve
     │   │   └── ...
     │   └── ...                 # etc.
     └── ...
+
+### typeScript 컴파일 설정
+
+- [tsconfig.json](./tsconfig.json)
+- [tsconfig.base.json](./tsconfig.base.json)
+
+### 주 사용 모듈
+
+1. core-js
+    - polyfill 지원
+2. eslint [설정파일](./.eslintrc.js)
+3. vue-property-decorator
+4. vuex-module-decorators
+5. ts-node
+    - typeScript Compile시 memory 사용
+6. husky
+    - 즉시 배포 가능한 상태 유지
+
+## source internal structure
+
+- 각 파일은 class로 구현.
+    1. [App.vue](./src/App.vue)
+    2. [page](./src/pages/card/index.vue)
+    3. [component](./src/components/Layout.vue)
+    4. [vuex(store)](./src/stores/modules/card.ts)
+    5. [service(axios)](./src/services/card.ts)
